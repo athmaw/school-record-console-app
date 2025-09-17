@@ -104,7 +104,7 @@ public class Main {
                 default:
                     System.out.println("Invalid choice.");
             }
-        } while(choice != 7);
+        } while (choice != 7);
 
         sc.close();
     }

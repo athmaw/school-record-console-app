@@ -9,7 +9,7 @@ public class Student extends Person {
     }
 
     public String getCourse() { 
-        return course;
+        return course; 
     }
 
     public void setCourse(String course) { 
@@ -19,12 +19,14 @@ public class Student extends Person {
     public int getYear() { 
         return year; 
     }
+
     public void setYear(int year) { 
         this.year = year; 
     }
 
     @Override
     public String toString() {
-        return "[Student] " + super.toString() + ", Course: " + course + ", Year: " + year;
+        return String.format("[STUDENT] %-60s | Course: %-10s | Year: %d",
+                              super.toString(), course, year);
     }
 }

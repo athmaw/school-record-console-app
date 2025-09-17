@@ -11,9 +11,11 @@ public class RecordManager {
     public void displayAll() {
 
         if(records.isEmpty()) {
-            System.out.println("No records found.");
+            System.out.println("⚠ No records found.");
             return;
         }
+
+        System.out.println("\n--- ALL RECORDS ---");
         for(Person p : records) {
             System.out.println(p);
         }
@@ -23,6 +25,7 @@ public class RecordManager {
 
         for(Person p : records) {
             if(p.getSchoolId().equals(id)) {
+                System.out.println("\n--- RECORD FOUND ---");
                 System.out.println(p);
                 return;
             }
@@ -47,6 +50,7 @@ public class RecordManager {
 
         while(iterator.hasNext()) {
             Person p = iterator.next();
+
             if(p.getSchoolId().equals(id)) {
                 iterator.remove();
                 System.out.println("Record deleted successfully!");

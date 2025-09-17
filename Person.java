@@ -23,7 +23,7 @@ public class Person {
         return firstName; 
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) { 
         this.firstName = firstName; 
     }
 
@@ -39,8 +39,8 @@ public class Person {
         return uscEmail; 
     }
 
-    public void setUscEmail(String uscEmail) {
-        this.uscEmail = uscEmail;
+    public void setUscEmail(String uscEmail) { 
+        this.uscEmail = uscEmail; 
     }
 
     public String getFullName() {
@@ -49,6 +49,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "ID: " + schoolId + ", Name: " + getFullName() + ", Email: " + uscEmail;
+        return String.format("ID: %-10s | Name: %-15s | Email: %-25s", 
+                              schoolId, getFullName(), uscEmail);
     }
 }
