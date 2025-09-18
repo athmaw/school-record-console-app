@@ -11,7 +11,7 @@ public class RecordManager {
     public void displayAll() {
 
         if(records.isEmpty()) {
-            System.out.println("⚠ No records found.");
+            System.out.println("No records found.");
             return;
         }
 
